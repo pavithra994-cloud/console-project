@@ -1,0 +1,242 @@
+import java.util.Scanner;
+class Ticket {
+
+    String passengerName;
+     int age;
+    String starting;
+    String destination;
+       int ticketNumber;
+
+    public Ticket(String passengerName, int age, String starting, String destination, int ticketNumber) {
+
+        this.passengerName = passengerName;
+
+        this.age = age;
+
+        this.starting=starting;
+
+        this.destination = destination;
+
+        this.ticketNumber = ticketNumber;
+
+    }
+
+    public void displayTicket() {
+
+        System.out.println("Ticket Details:");
+
+        System.out.println("Passenger Name: " + passengerName);
+
+        System.out.println("Age: " + age);
+
+        System.out.println("Starting :" +starting);
+
+        System.out.println("Destination: " + destination);
+
+        System.out.println("Ticket Number: " + ticketNumber);
+
+    }
+
+}
+
+class  selectiontrain{
+       int selecttrain(int j) {
+      String s="";
+      String st="";
+      int d=0;
+      int time1=0,time2=0,a1=0,a2=0,x=1;
+     
+        switch (j) {
+        case 1: {
+                  s= "Rajdhani Express";
+           
+                   st="Sealdah Station";
+           time1 = 10;
+            time2 = 00;
+           a1 = 2099;
+            a2 = 1560;
+ 
+            d=cal(a1, a2, j);
+            System.out.println("Total Bill Amount: \n"+d);
+           
+        }; break;
+        case 2: {
+           
+        s= "Satabdi Express";
+           
+                st=   "Howrah Station";
+            time1 = 05;
+            time2 = 00;
+            a1 = 1801;
+            a2 = 981;
+            d=cal(a1, a2, j);
+            System.out.println("Total Bill Amount: \n"+d);
+
+        }; break;
+        case 3: {
+           
+                 s=  "Humsafar Express";
+           
+                 st=  "Kolkata Chitpur Express";
+            time1 = 11;
+            time2 = 00;
+            a1 = 2199;
+            a2 = 1780;
+            d=cal(a1, a2, j);
+            System.out.println("Total Bill Amount: \n"+d);
+        }; break;
+        case 4: {
+            s= "Garib-Rath Express";
+           st="Sealdah Station";
+            time1 = 05;
+            time2 = 00;
+            a1 = 1759;
+            a2 = 1200;
+ 
+            d=cal(a1, a2, j);
+            System.out.println("Total Bill Amount: \n"+d);
+               }; break;
+        case 5: {
+            s="Duronto Express";
+            st ="Santraganchi Station";
+            time1 = 07;
+            time2 = 00;
+            a1 = 2205;
+            a2 = 1905;
+ 
+            // Calling cal() function with
+            // three argument & return value
+            //amountcalculation amnt=new amountcalculation();
+             d=cal(a1, a2, j);
+            System.out.println("Total Bill Amount: \n"+d);
+        }; break;
+        default:
+            System.out.println("Enter Correct choice.....\n");
+            x = 1;
+            break;
+        }
+        return d;
+    }
+       int cal(int y1, int y2, int h)
+       {
+          int b,c=0;
+           int i=0;
+           System.out.println("\t\tEnter Your Choice......\n");
+           System.out.println("\t\t1. Sleeper Class....\n");
+           System.out.println("\t\t2. A.C Class.......\n");
+           Scanner sc=new Scanner(System.in);
+           i=sc.nextInt();
+           switch (i) {
+           case 1: {
+              b = y2 * h;
+               c = b + (b * 5);
+           } break;
+           case 2: {
+                  b = y1 * h;
+                    c = b + (b *8);
+                   break;
+               }
+             
+           }
+           
+           return c;
+       }
+}
+class SeatBook{
+String seat() {
+System.out.println("\t           -:SEAT MATRIX:-        \n");
+    System.out.println("\t(U)    (M)        (L)    (L)    "
+           + "    (U)\n\n");
+    System.out.println("\t01    02        03\t04        "
+            +"05 \n\n");
+    System.out.println("\t06    07        08\t09        "
+           + "10 \n");
+    System.out.println("\t11    12        13\t14        "
+            +"15\n\n");
+    System.out.println("\t16    17        18\t19        "
+ +"20\n");
+    System.out.println("\t21    22        23\t24        "
+            +"25\n\n");
+    System.out.println("\t26    27        28\t29        "
+            +"30\n");
+    System.out.println("\t31    32        33\t34        "
+            +"35\n\n");
+    System.out.println("\t36    37        38\t39        "
+            +"40\n");
+    System.out.println("\t41    42        43\t44        "
+            +"45\n\n");
+    System.out.println("\t46    47        48\t49        "
+            +"50\n");
+    System.out.println("\t51    52        53\t54        "
+            +"55\n\n");
+    System.out.println("\t56    57        58\t59        "
+            +"60\n");
+
+}
+
+}
+
+
+public class pavithraproject {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welcome to Railway Ticket Reservation System");
+        System.out.println("ENTER THE NUMBER OF PASSENGERS");
+        int n=sc.nextInt();
+        String s[]=new String[n];
+        for(int i=0;i<n;i++) {
+        System.out.print("Enter Passenger Name :"+(i+1));
+        String name = sc.nextLine();
+
+        }
+ String name = sc.nextLine();
+
+        System.out.print("Enter Passenger Age: ");
+
+       
+       
+        int age = sc.nextInt();
+
+        System.out.print("Enter starting point: ");
+
+        String destination = sc.next();
+
+        System.out.print("Enter Destination point:");
+
+        String starting =sc.next();
+       
+        System.out.println("\t\tThe Following Trains Are Available.....\n");
+        System.out.println("\t\t  1. Rajdhani Express...."+
+        ".....10:00"
+                +"a.m........Sealdah Station\n");
+        System.out.println("\t\t2. Satabdi Express..."
+                +".......05:00 "
+                +"p.m........Howrah Station\n");
+        System.out.println("\t\t3. Humsafar Express..."
+                +".......11:00 "
+                +"p.m........Kolkata Chitpur"
+                +" Station\n");
+        System.out.println("\t\t4. Garib-Rath Express"
+                +".........05:00 "
+                +"p.m........Sealdah Station\n");
+        System.out.println("\t\t5. Duronto Express..."
+                +".........07:00 "
+                +"a.m.........Santraganchi"
+                +"Station\n");
+         int j=sc.nextInt();
+          int d=0;
+        System.out.println("-----------------------------");
+        selectiontrain st=new selectiontrain();
+       d= st.selecttrain(j);
+            System.out.println("------------------------------");
+        SeatBook sb=new SeatBook();
+      
+
+    }
+
+}
+
+
